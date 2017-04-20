@@ -27,7 +27,7 @@ public class CallMapp extends AppCompatActivity {
         String mlabel = label.getText().toString().trim();
 
 
-        Uri location = Uri.parse("http://maps.google.com/maps?q=loc:13.7597237,100.5392481");
+        Uri location = Uri.parse("http://maps.google.com/maps?q=loc:"+lat+","+lng+"("+mlabel+")");
         Intent mapIntent = new Intent(Intent.ACTION_VIEW,location);
         //MapIntent.setPackage("com.google.android.apps.maps");//ใช้ไม่ได้กับ gynemotion
         startActivity(mapIntent);
